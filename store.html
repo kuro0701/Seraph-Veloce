@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seraph Veloce - Store</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Store Page Specific Styles */
+        .store-header {
+            text-align: center;
+            padding: 150px 0 50px 0;
+        }
+
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding-bottom: 80px;
+        }
+
+        .wallpaper-item {
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .malacoda-mode .wallpaper-item {
+             border: 1px solid #8B0000;
+        }
+
+        .wallpaper-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .wallpaper-preview img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .wallpaper-info {
+            padding: 20px;
+        }
+
+        .wallpaper-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 40px 0 100px 0;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .malacoda-mode .download-button {
+             background-color: #8B0000;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+        .malacoda-mode .download-button:hover {
+             background-color: #6a0000;
+        }
+    </style>
+</head>
+<body class="lyra-mode">
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html" class="logo-lyra">Seraph Veloce</a>
+            <a href="index.html" class="logo-malacoda">SERAPH VELOCE</a>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lore.html">Lore</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="lyrics.html">Lyrics</a></li>
+                <li><a href="store.html" class="active">Store</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+
+        <div class="persona-shift-container">
+            <div class="toggle-labels">
+                <span class="toggle-label-lyra">Seraph OS Protocol: ENHANCED</span>
+                <span class="toggle-label-malacoda">Transferring Power to Abyss Kernel...</span>
+            </div>
+            <button id="persona-shift-toggle" aria-label="Toggle Persona Mode"></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="store-header">
+                <h1>// DIGITAL ARTIFACTS //</h1>
+                <p>Official Wallpaper Pack Vol. 1 - Free Download</p>
+            </div>
+
+            <div class="store-grid">
+                <div class="wallpaper-item">
+                    <div class="wallpaper-preview">
+                        <img src="images/store/sv_wallpaper_lyra_preview.png" alt="Lyra Mode Wallpaper Preview">
+                    </div>
+                    <div class="wallpaper-info">
+                        <h3>Lyra Mode</h3>
+                        <p>Order // Serenity // Celestial</p>
+                    </div>
+                </div>
+
+                <div class="wallpaper-item">
+                    <div class="wallpaper-preview">
+                        <img src="images/store/sv_wallpaper_malacoda_preview.png" alt="Malacoda Mode Wallpaper Preview">
+                    </div>
+                    <div class="wallpaper-info">
+                        <h3>Malacoda Mode</h3>
+                        <p>Chaos // Fury // Abyssal</p>
+                    </div>
+                </div>
+
+                <div class="wallpaper-item">
+                    <div class="wallpaper-preview">
+                        <img src="images/store/sv_wallpaper_duality_preview.png" alt="Duality Wallpaper Preview">
+                    </div>
+                    <div class="wallpaper-info">
+                        <h3>Duality</h3>
+                        <p>Fractured Soul // System Conflict</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h2>Download Now</h2>
+                <p style="margin-bottom: 25px;">The pack contains 6 high-resolution wallpapers (PC & Smartphone for each mode).</p>
+                <a href="downloads/Seraph_Veloce_Wallpaper_Pack_Vol1.zip" class="download-button">DOWNLOAD (.zip)</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 PROJECT-KIMERA. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

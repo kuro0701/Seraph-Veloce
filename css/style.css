@@ -1,0 +1,331 @@
+/*
+ * Seraph Veloce Official Website Stylesheet
+ * Chapter 2: Visual Architecture - Tech-Gothic-Cyberpunk Trinity
+ * Chapter 3: Typography Identity
+ */
+
+/* --------------------------------- */
+/* FONT IMPORTS                      */
+/* --------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&display=swap');
+
+/* NOTE: Ethnocentric and Kepler are specific fonts. 
+  For this build, we use web-safe alternatives.
+  - Kepler is replaced by 'Cormorant Garamond'.
+  - Ethnocentric will be approximated with a bold, wide sans-serif and specific styling.
+*/
+
+/* --------------------------------- */
+/* ROOT & PERSONA VARIABLES          */
+/* --------------------------------- */
+:root {
+    /* Base Colors (Techwear Foundation) */
+    --color-charcoal: #1a1a1a;
+    --color-slate: #2c2c2c;
+    --color-light-grey: #cccccc;
+    --color-white: #ffffff;
+
+    /* Base Typography */
+    --font-system: 'Noto Sans JP', sans-serif;
+    --font-lyra-heading: 'Cormorant Garamond', serif; /* Kepler alternative */
+    --font-malacoda-heading: 'Ethnocentric', sans-serif; /* Placeholder name */
+    --font-lyra-quote: 'Cormorant Garamond', serif; /* Baskerville alternative */
+
+    /* Default to Lyra Mode */
+    --color-primary: var(--color-lyra-blue);
+    --color-background: var(--color-charcoal);
+    --font-heading: var(--font-lyra-heading);
+    --cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2300BFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E") 6 6, auto;
+}
+
+/* --------------------------------- */
+/* LYRA MODE ("Seraph OS") */
+/* --------------------------------- */
+.lyra-mode {
+    --color-lyra-blue: #00BFFF; /* Electric Blue */
+    
+    --color-primary: var(--color-lyra-blue);
+    --font-heading: var(--font-lyra-heading);
+    --cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2300BFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E") 6 6, auto;
+    
+    --button-hover-bg: var(--color-lyra-blue);
+    --button-hover-shadow: 0 0 15px var(--color-lyra-blue);
+    --transition-speed: 0.4s;
+    --animation-timing: ease-in-out;
+}
+
+/* --------------------------------- */
+/* MALACODA MODE ("Abyss Kernel") */
+/* --------------------------------- */
+.malacoda-mode {
+    --color-malacoda-red: #DC143C; /* Crimson Red */
+    
+    --color-primary: var(--color-malacoda-red);
+    --font-heading: var(--font-malacoda-heading);
+    --cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='%23DC143C' stroke='white' stroke-width='1'%3E%3Cpath d='M12 0l-12 24h24z'/%3E%3C/svg%3E") 8 8, auto;
+
+    --button-hover-bg: transparent;
+    --button-hover-shadow: 0 0 15px var(--color-malacoda-red);
+    --transition-speed: 0.2s;
+    --animation-timing: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* --------------------------------- */
+/* GLOBAL STYLES                     */
+/* --------------------------------- */
+body {
+    background-color: var(--color-background);
+    color: var(--color-light-grey);
+    font-family: var(--font-system);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color var(--transition-speed) ease;
+    cursor: var(--cursor);
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: none;
+    cursor: var(--cursor);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--color-primary);
+}
+.malacoda-mode h1 {
+    font-size: 4.2rem;
+    letter-spacing: 2px;
+    font-weight: 400; /* Ethnocentric is bold by nature */
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+.malacoda-mode h2 {
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+/* --------------------------------- */
+/* HEADER & NAVIGATION               */
+/* --------------------------------- */
+.main-header {
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.logo-lyra { display: block; }
+.logo-malacoda { display: none; }
+.malacoda-mode .logo-lyra { display: none; }
+.malacoda-mode .logo-malacoda { display: block; }
+
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.main-nav ul li a {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width var(--transition-speed) var(--animation-timing);
+}
+
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after {
+    width: 100%;
+}
+
+
+/* --------------------------------- */
+/* PERSONA SHIFT TOGGLE              */
+/* --------------------------------- */
+#persona-shift-toggle {
+    position: relative;
+    width: 70px;
+    height: 30px;
+    border: 2px solid var(--color-primary);
+    border-radius: 15px;
+    background: transparent;
+    cursor: var(--cursor);
+    transition: border-color 0.3s ease;
+}
+
+#persona-shift-toggle::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.3s ease;
+}
+
+.malacoda-mode #persona-shift-toggle::before {
+    transform: translateX(40px);
+}
+
+/* UI Text for Toggle */
+.toggle-labels {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 0.7rem;
+    color: var(--color-light-grey);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.toggle-label-lyra { display: block; }
+.toggle-label-malacoda { display: none; }
+.malacoda-mode .toggle-label-lyra { display: none; }
+.malacoda-mode .toggle-label-malacoda { display: block; }
+
+/* --------------------------------- */
+/* HOME PAGE SPECIFIC STYLES         */
+/* --------------------------------- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    text-align: left;
+    padding: 0 15%; /* 変更: さらに左に寄せるためにpaddingを増やす */
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 変更: グラデーションの透明度を上げ、背景画像の位置を調整 */
+    background-image: linear-gradient(to right, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0.2) 50%, rgba(26, 26, 26, 0) 70%), url('../images/seraph_veloce_hero.png');
+    background-size: cover;
+    background-position: 70% center; /* 変更: 画像の右寄りをさらに調整 */
+    opacity: 1; /* 変更: グラデーションで暗くするので、画像のopacityは1に戻す */
+    z-index: -1;
+    transition: filter 0.5s ease;
+}
+.malacoda-mode .hero-image-container {
+    filter: saturate(1.5) contrast(1.2);
+}
+
+.hero-content {
+    max-width: 500px; /* 変更: テキストブロックをさらに狭くして、右側の画像エリアを広げる */
+    z-index: 1; /* 追加: テキストが背景画像より前面に来るように */
+}
+
+.hero-title {
+    text-shadow: 0 0 15px var(--color-primary);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-light-grey);
+    margin-bottom: 2rem;
+}
+
+.hero-cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid var(--color-primary);
+    color: var(--color-white);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all var(--transition-speed) var(--animation-timing);
+}
+
+.cta-button:hover {
+    background: var(--button-hover-bg);
+    box-shadow: var(--button-hover-shadow);
+    color: var(--color-white);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: var(--color-primary);
+}
+.cta-button.secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-charcoal);
+}
+
+
+/* --------------------------------- */
+/* FOOTER                            */
+/* --------------------------------- */
+.main-footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--color-slate);
+    font-size: 0.9rem;
+    color: #888;
+}
