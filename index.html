@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="lyra-mode">
 
     <header class="main-header">
         <div class="logo">
@@ -38,8 +38,7 @@
 
     <main>
         <section class="hero-section">
-            <div class="hero-image-container">
-                </div>
+            <div class="hero-image-container"></div>
             <div class="hero-content">
                 <h1 class="hero-title">Digital Soul, Fractured</h1>
                 <p class="hero-subtitle">The Animus of a celestial conflict, encoded in sound.</p>
@@ -50,17 +49,53 @@
             </div>
         </section>
 
-        <div class="container" style="min-height: 400px; text-align: center;">
-            <h2>// SYSTEM STATUS //</h2>
-            <p>Duality Meter, News Feed, and Music Links will be implemented in Phase 2 & 3.</p>
-        </div>
+        <section class="system-status-section">
+            <div class="container">
+                <h2 class="section-title">// SYSTEM STATUS //</h2>
+                <div class="status-grid">
+
+                    <div class="status-module duality-meter">
+                        <h3>DUALITY METER</h3>
+                        <div class="meter-container">
+                            <span class="meter-label lyra-label">LYRA</span>
+                            <div class="meter-track">
+                                <div class="meter-indicator"></div>
+                            </div>
+                            <span class="meter-label malacoda-label">MALACODA</span>
+                        </div>
+                        <p id="duality-status-text">SYSTEM CORE: BALANCED</p>
+                    </div>
+
+                    <div class="status-module latest-transmission">
+                        <h3>LATEST TRANSMISSION</h3>
+                        <div class="transmission-content">
+                            <img src="images/seraph_veloce_hero.png" alt="Resonance: Veloce Rebellion Album Art" class="album-art">
+                            <div class="transmission-info">
+                                <h4>DEBUT ALBUM</h4>
+                                <p class="album-title">Resonance: Veloce Rebellion</p>
+                                <a href="music.html" class="cta-button">STREAM NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="status-module system-alerts">
+                        <h3>SYSTEM ALERTS</h3>
+                        <ul class="alerts-list">
+                            <li><span class="timestamp">2025.09.19</span><span class="alert-message" id="alert1"></span></li>
+                            <li><span class="timestamp">2025.09.18</span><span class="alert-message" id="alert2"></span></li>
+                            <li><span class="timestamp">2025.09.17</span><span class="alert-message" id="alert3"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <footer class="main-footer">
         <div class="container">
             <p>&copy; 2025 PROJECT-KIMERA. ALL RIGHTS RESERVED.</p>
-            </div>
+        </div>
     </footer>
     
     <script src="js/main.js"></script>

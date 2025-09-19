@@ -6,6 +6,56 @@
     <title>Seraph Veloce - Lyrics</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .lyrics-container {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .song-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .song-artist {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 4rem;
+        }
+        .lyrics-content p {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 2.5rem;
+        }
+        .lyra-part {
+            font-family: var(--font-lyra-quote);
+            color: var(--color-lyra-blue);
+            font-style: italic;
+        }
+        .malacoda-part {
+            font-family: var(--font-malacoda-heading);
+            color: var(--color-malacoda-red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.3rem;
+        }
+        .malacoda-part .bilingual-rap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 2rem;
+            font-size: 1.1rem;
+            line-height: 2.2;
+        }
+        .bridge {
+            color: var(--color-white);
+            font-weight: bold;
+        }
+        .outro {
+            color: #999;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body class="lyra-mode">
 
@@ -37,9 +87,49 @@
     </header>
 
     <main>
-        <div class="container" style="padding-top: 150px; min-height: 60vh;">
-            <h1 style="text-align: center;">Lyrics</h1>
-            <p style="text-align: center;">No lyrics available yet.</p>
+        <div class="container lyrics-container">
+            <h1 class="song-title">// Veloce & Feroce //</h1>
+            <p class="song-artist">From the debut album "Resonance: Veloce Rebellion"</p>
+            
+            <div class="lyrics-content">
+                <p class="lyra-part">
+                    Heaven’s code in fragile lines<br>
+                    Blue light tracing fractured signs<br>
+                    Balance, silence, hold it tight<br>
+                    Angel’s shell against the night
+                </p>
+
+                <p class="bridge">
+                    But the current cracks the cage<br>
+                    Crimson fire floods the stage
+                </p>
+                
+                <p class="malacoda-part">
+                    Veloce & Feroce, storm in stereo<br>
+                    Fangs in the rhythm, blades in the flow<br>
+                    Switch the tongue mid-word, let it overload<br>
+                    Machine-speed fury, break the human code
+                </p>
+
+                <div class="malacoda-part bilingual-rap">
+                    <span>Glitch in the veins</span><span>血流ハイテンポ</span>
+                    <span>Binary rage</span><span>世界を転倒</span>
+                    <span>Crimson horizon</span><span>青を燃焼</span>
+                    <span>Two voices clash</span><span>Echoes crescendo</span>
+                </div>
+                
+                <p class="malacoda-part">
+                    Veloce & Feroce, storm in stereo<br>
+                    Blades of chaos, wings of shadow<br>
+                    No chains can bind, no law can slow<br>
+                    Infinite speed where the cosmos flows
+                </p>
+
+                <p class="outro">
+                    Resonance remains<br>
+                    Echoes never fade
+                </p>
+            </div>
         </div>
     </main>
 

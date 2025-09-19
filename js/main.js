@@ -38,3 +38,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+/*
+ * Feature: System Status Typewriter Effect
+ */
+function typeWriter(element, text, i, callback) {
+    if (i < text.length) {
+        element.innerHTML = text.substring(0, i + 1);
+        setTimeout(() => {
+            typeWriter(element, text, i + 1, callback);
+        }, 50); // Typing speed
+    } else if (callback) {
+        callback();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const alert1 = document.getElementById('alert1');
+    const alert2 = document.getElementById('alert2');
+    const alert3 = document.getElementById('alert3');
+
+    if (alert1 && alert2 && alert3) {
+        const text1 = 'Debut Album "Resonance: Veloce Rebellion" - Transmission Complete.';
+        const text2 = 'Wallpaper Pack Vol.1 added to Digital Artifacts.';
+        const text3 = 'SYSTEM KERNEL: Duality protocols initiated.';
+        
+        // Chain the animations
+        setTimeout(() => {
+             typeWriter(alert1, text1, 0, () => {
+                alert1.style.animation = 'none'; // Stop blinking
+                typeWriter(alert2, text2, 0, () => {
+                   alert2.style.animation = 'none';
+                   typeWriter(alert3, text3, 0, () => {
+                      alert3.style.animation = 'none';
+                   });
+                });
+             });
+        }, 1000); // Start after 1 second
+    }
+    
+    // Duality Meter Text Change
+    const personaToggle = document.getElementById('persona-shift-toggle');
+    const dualityStatus = document.getElementById('duality-status-text');
+    
+    if(personaToggle && dualityStatus) {
+        personaToggle.addEventListener('click', () => {
+            if (document.body.classList.contains('lyra-mode')) {
+                 dualityStatus.textContent = 'SERAPH OS: ENHANCED';
+            } else {
+                 dualityStatus.textContent = 'ABYSS KERNEL: ACTIVE';
+            }
+        });
+    }
+});
