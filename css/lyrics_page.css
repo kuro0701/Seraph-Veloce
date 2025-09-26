@@ -1,0 +1,58 @@
+.lyrics-container {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.song-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.song-artist {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 4rem;
+}
+
+.lyrics-content p, .lyrics-content div {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 2.5rem;
+}
+
+.lyra-part {
+    font-family: var(--font-lyra-quote);
+    color: var(--color-lyra-blue);
+    font-style: italic;
+}
+
+.malacoda-part {
+    font-family: var(--font-malacoda-heading);
+    color: var(--color-malacoda-red);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+
+.malacoda-part .bilingual-rap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+    font-size: 1.1rem;
+    line-height: 2.2;
+    text-align: left;
+    margin: 2.5rem auto;
+}
+
+.bridge {
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+.outro {
+    color: #999;
+    font-style: italic;
+}

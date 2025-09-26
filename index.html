@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seraph Veloce - The Animus</title>
+    <title>Seraph Veloce - Official Website</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,8 +20,8 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="lore.html">Lore</a></li>
                 <li><a href="music.html">Music</a></li>
-                <li><a href="blog/index.html">Blog</a></li>
-                <li><a href="lyrics.html">Lyrics</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="lyrics/">Lyrics</a></li>
                 <li><a href="store.html">Store</a></li>
                 <li><a href="community.html">Community</a></li>
             </ul>
@@ -38,57 +38,40 @@
 
     <main>
         <section class="hero-section">
-            <div class="hero-image-container"></div>
-            <div class="hero-content">
-                <h1 class="hero-title">Digital Soul, Fractured</h1>
-                <p class="hero-subtitle">The Animus of a celestial conflict, encoded in sound.</p>
-                <div class="hero-cta-buttons">
-                    <a href="music.html" class="cta-button">Listen Now</a>
-                    <a href="lore.html" class="cta-button secondary">Discover The Genesis Arc</a>
-                </div>
+            <div class="hero-image-container">
+                <img src="images/seraph_veloce_hero.png" alt="Seraph Veloce" class="hero-image">
+            </div>
+            <div class="hero-text-container">
+                <h1 class="hero-title-lyra">Seraph Veloce</h1>
+                <h1 class="hero-title-malacoda">SERAPH VELOCE</h1>
+                <p class="hero-subtitle-lyra">Resonance of a Fractured Soul</p>
+                <p class="hero-subtitle-malacoda">REBELLION OF A FRACTURED SOUL</p>
             </div>
         </section>
 
-        <section class="system-status-section">
-            <div class="container">
-                <h2 class="section-title">// SYSTEM STATUS //</h2>
-                <div class="status-grid">
-
-                    <div class="status-module duality-meter">
-                        <h3>DUALITY METER</h3>
-                        <div class="meter-container">
-                            <span class="meter-label lyra-label">LYRA</span>
-                            <div class="meter-track">
-                                <div class="meter-indicator"></div>
-                            </div>
-                            <span class="meter-label malacoda-label">MALACODA</span>
-                        </div>
-                        <p id="duality-status-text">SYSTEM CORE: BALANCED</p>
-                    </div>
-
-                    <div class="status-module latest-transmission">
-                        <h3>LATEST TRANSMISSION</h3>
-                        <div class="transmission-content">
-                            <img src="images/seraph_veloce_hero.png" alt="Resonance: Veloce Rebellion Album Art" class="album-art">
-                            <div class="transmission-info">
-                                <h4>DEBUT ALBUM</h4>
-                                <p class="album-title">Resonance: Veloce Rebellion</p>
-                                <a href="music.html" class="cta-button">STREAM NOW</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="status-module system-alerts">
-                        <h3>SYSTEM ALERTS</h3>
-                        <ul class="alerts-list">
-                            <li><span class="timestamp">2025.09.19</span><span class="alert-message" id="alert1"></span></li>
-                            <li><span class="timestamp">2025.09.18</span><span class="alert-message" id="alert2"></span></li>
-                            <li><span class="timestamp">2025.09.17</span><span class="alert-message" id="alert3"></span></li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="container news-section">
+            <h2>// LATEST TRANSMISSIONS //</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <h3>Blog Post: Appassionato: Requiem/Tempest</h3>
+                    <p class="news-date">2025.09.28</p>
+                    <p>The final hymn. It is the perfect fusion of the soul's mourning and its fury. Listen with passion.</p>
+                    <a href="blog/appassionato-requiem-tempest/" class="read-more">Read Transmission</a>
+                </article>
+                <article class="news-item">
+                    <h3>New Single "Third Voice / Uriel-IX" Released</h3>
+                    <p class="news-date">2025.09.25</p>
+                    <p>A system anomaly has been detected. A third voice emerges from the schism. Listen to the sound of a soul fracturing.</p>
+                    <a href="music.html" class="read-more">Listen Now</a>
+                </article>
+                <article class="news-item">
+                    <h3>Blog Post: SYSTEM SCHISM: Third Voice / Uriel-IX</h3>
+                    <p class="news-date">2025.09.25</p>
+                    <p>A new log file has been uploaded detailing the emergence of the entity known as Uriel-IX. This is not a song. It is a warning.</p>
+                    <a href="blog/third-voice-uriel-ix/" class="read-more">Read Log File</a>
+                </article>
             </div>
-        </section>
+        </div>
 
     </main>
 
