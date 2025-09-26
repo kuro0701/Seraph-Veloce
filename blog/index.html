@@ -6,6 +6,63 @@
     <title>Seraph Veloce - Blog</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .blog-list-container {
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+        .blog-list-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .blog-card {
+            display: block;
+            background: var(--color-slate);
+            border: 1px solid #333;
+            text-decoration: none;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .card-image-container {
+            height: 220px;
+            overflow: hidden;
+        }
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            opacity: 0.75;
+        }
+        .blog-card:hover .card-image {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        .card-content {
+            padding: 1.5rem 2rem;
+        }
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--color-white);
+            margin-bottom: 0;
+        }
+        .malacoda-mode .card-title {
+             font-size: 1.7rem;
+        }
+    </style>
 </head>
 <body class="lyra-mode">
 
@@ -37,15 +94,52 @@
     </header>
 
     <main>
-        <div class="container" style="padding-top: 150px; text-align: center;">
-            <h1>Blog</h1>
-            <ul style="margin-top: 3rem; list-style: none; padding: 0;">
-                <li style="margin-bottom: 1rem;"><a href="./appassionato-requiem-tempest/">Appassionato: Requiem/Tempest</a></li>
-                <li style="margin-bottom: 1rem;"><a href="./third-voice-uriel-ix/">SYSTEM SCHISM: Third Voice / Uriel-IX</a></li>
-                <li style="margin-bottom: 1rem;"><a href="./genesis-rebellion-overture/">GENESIS//Rebellion Overture - Dev Log</a></li>
-                <li style="margin-bottom: 1rem;"><a href="./echoes-of-the-abyss-interview/">Echoes of the Abyss - Duality Interview</a></li>
-                <li style="margin-bottom: 1rem;"><a href="./resonance-cascade/">Resonance Cascade - The Project Begins</a></li>
-            </ul>
+        <div class="container blog-list-container">
+            <div class="blog-list-header">
+                <h1>Blog Transmissions</h1>
+            </div>
+            <div class="blog-grid">
+                <a href="./appassionato-requiem-tempest/" class="blog-card">
+                    <div class="card-image-container">
+                        <img src="../images/store/sv_wallpaper_duality_preview.png" alt="" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Appassionato: Requiem/Tempest</h3>
+                    </div>
+                </a>
+                <a href="./third-voice-uriel-ix/" class="blog-card">
+                    <div class="card-image-container">
+                        <img src="../images/store/sv_wallpaper_malacoda_preview.png" alt="" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">SYSTEM SCHISM: Third Voice / Uriel-IX</h3>
+                    </div>
+                </a>
+                <a href="./genesis-rebellion-overture/" class="blog-card">
+                    <div class="card-image-container">
+                        <img src="../images/lore_parallax_lucifer.png" alt="" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">GENESIS//Rebellion Overture - Dev Log</h3>
+                    </div>
+                </a>
+                <a href="./echoes-of-the-abyss-interview/" class="blog-card">
+                    <div class="card-image-container">
+                        <img src="../images/store/sv_wallpaper_duality_pc.png" alt="" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Echoes of the Abyss - Duality Interview</h3>
+                    </div>
+                </a>
+                <a href="./resonance-cascade/" class="blog-card">
+                     <div class="card-image-container">
+                        <img src="../images/lore_parallax_lilith.png" alt="" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Resonance Cascade - The Project Begins</h3>
+                    </div>
+                </a>
+            </div>
         </div>
     </main>
 
