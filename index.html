@@ -6,6 +6,76 @@
     <title>Seraph Veloce - Official Website</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* LATEST TRANSMISSIONS SECTION STYLES */
+        .transmissions-section {
+            background-color: var(--color-slate);
+            border-top: 1px solid #444;
+            border-bottom: 1px solid #444;
+        }
+        .transmissions-section h2 {
+            text-align: center;
+            color: var(--color-primary);
+        }
+        .transmissions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .transmission-card {
+            display: block;
+            background: rgba(0,0,0,0.2);
+            border: 1px solid #333;
+            overflow: hidden;
+            transition: transform var(--transition-speed) var(--animation-timing), border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .transmission-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-primary);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center 20%;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        .transmission-card:hover .card-image {
+            opacity: 1;
+        }
+        .card-content {
+            padding: 1.5rem 2rem;
+        }
+        .card-meta {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .card-meta span {
+            color: var(--color-primary);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-white);
+        }
+        .malacoda-mode .card-title {
+            font-size: 1.6rem;
+        }
+        .card-excerpt {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--color-light-grey);
+        }
+    </style>
 </head>
 <body class="lyra-mode">
 
@@ -49,29 +119,35 @@
             </div>
         </section>
 
-        <div class="container news-section">
+        <section class="container transmissions-section">
             <h2>// LATEST TRANSMISSIONS //</h2>
-            <div class="news-grid">
-                <article class="news-item">
-                    <h3>Blog Post: Appassionato: Requiem/Tempest</h3>
-                    <p class="news-date">2025.09.28</p>
-                    <p>The final hymn. It is the perfect fusion of the soul's mourning and its fury. Listen with passion.</p>
-                    <a href="blog/appassionato-requiem-tempest/" class="read-more">Read Transmission</a>
-                </article>
-                <article class="news-item">
-                    <h3>New Single "Third Voice / Uriel-IX" Released</h3>
-                    <p class="news-date">2025.09.25</p>
-                    <p>A system anomaly has been detected. A third voice emerges from the schism. Listen to the sound of a soul fracturing.</p>
-                    <a href="music.html" class="read-more">Listen Now</a>
-                </article>
-                <article class="news-item">
-                    <h3>Blog Post: SYSTEM SCHISM: Third Voice / Uriel-IX</h3>
-                    <p class="news-date">2025.09.25</p>
-                    <p>A new log file has been uploaded detailing the emergence of the entity known as Uriel-IX. This is not a song. It is a warning.</p>
-                    <a href="blog/third-voice-uriel-ix/" class="read-more">Read Log File</a>
-                </article>
+            <div class="transmissions-grid">
+                <a href="blog/appassionato-requiem-tempest/" class="transmission-card">
+                    <img src="images/store/sv_wallpaper_duality_preview.png" alt="Appassionato: Requiem/Tempest" class="card-image">
+                    <div class="card-content">
+                        <p class="card-meta"><span>BLOG</span> // 2025.09.28</p>
+                        <h3 class="card-title">Appassionato: Requiem/Tempest</h3>
+                        <p class="card-excerpt">The final hymn. It is the perfect fusion of the soul's mourning and its fury. Listen with passion.</p>
+                    </div>
+                </a>
+                <a href="music.html" class="transmission-card">
+                    <img src="images/store/sv_wallpaper_malacoda_preview.png" alt="Third Voice / Uriel-IX" class="card-image">
+                    <div class="card-content">
+                        <p class="card-meta"><span>MUSIC</span> // 2025.09.25</p>
+                        <h3 class="card-title">New Single "Third Voice / Uriel-IX" Released</h3>
+                        <p class="card-excerpt">A system anomaly has been detected. A third voice emerges from the schism. Listen to the sound of a soul fracturing.</p>
+                    </div>
+                </a>
+                <a href="blog/third-voice-uriel-ix/" class="transmission-card">
+                    <img src="images/store/sv_wallpaper_lyra_preview.png" alt="SYSTEM SCHISM" class="card-image">
+                    <div class="card-content">
+                        <p class="card-meta"><span>LOG FILE</span> // 2025.09.25</p>
+                        <h3 class="card-title">SYSTEM SCHISM: Third Voice / Uriel-IX</h3>
+                        <p class="card-excerpt">A new log file has been uploaded detailing the emergence of the entity known as Uriel-IX. This is not a song. It is a warning.</p>
+                    </div>
+                </a>
             </div>
-        </div>
+        </section>
 
     </main>
 

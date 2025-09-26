@@ -35,11 +35,65 @@
             <button id="persona-shift-toggle" aria-label="Toggle Persona Mode"></button>
         </div>
     </header>
-
+    <style>
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .store-item {
+            border: 1px solid #333;
+            padding: 1.5rem;
+            background: rgba(0,0,0,0.2);
+        }
+        .store-item img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .store-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        .store-item .price {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+        .buy-button {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid var(--color-primary);
+            color: var(--color-white);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .buy-button:hover {
+            background: var(--color-primary);
+            box-shadow: 0 0 15px var(--color-primary);
+            color: var(--color-charcoal);
+        }
+    </style>
     <main>
         <div class="container" style="padding-top: 150px; text-align: center;">
-            <h1>Store</h1>
-            <p style="margin-top: 2rem;">Coming soon...</p>
+            <h1>Digital Artifacts</h1>
+            <div class="store-grid">
+                <div class="store-item">
+                    <img src="images/store/sv_wallpaper_duality_preview.png" alt="Wallpaper Pack Vol.1">
+                    <h3>Wallpaper Pack Vol.1</h3>
+                    <p class="price">FREE</p>
+                    <p style="margin-bottom: 2rem;">A collection of high-resolution wallpapers for PC and mobile, featuring Lyra, Malacoda, and their duality.</p>
+                    <a href="downloads/Seraph_Veloce_Wallpaper_Pack_Vol1.zip" class="buy-button" download>Download</a>
+                </div>
+            </div>
         </div>
     </main>
 

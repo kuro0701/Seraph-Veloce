@@ -35,17 +35,53 @@
             <button id="persona-shift-toggle" aria-label="Toggle Persona Mode"></button>
         </div>
     </header>
+    
+    <style>
+        .streaming-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .streaming-button {
+            display: block;
+            padding: 1.5rem 2rem;
+            border: 2px solid var(--color-primary);
+            color: var(--color-white);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all var(--transition-speed) var(--animation-timing);
+            text-align: center;
+        }
+        .streaming-button:hover {
+            background: var(--color-primary);
+            box-shadow: 0 0 15px var(--color-primary);
+            color: var(--color-black);
+        }
+        .lyra-mode .streaming-button:hover {
+            color: var(--color-white);
+        }
+    </style>
 
     <main>
         <div class="container" style="padding-top: 150px; text-align: center;">
-            <h1>Music</h1>
-            <p style="margin-top: 2rem;">Coming soon...</p>
+            <h1>Listen Now</h1>
+            <div class="streaming-links" style="margin-top: 4rem;">
+                <a href="https://music.apple.com/us/artist/seraph-veloce/1839324914" target="_blank" rel="noopener noreferrer" class="streaming-button">Apple Music</a>
+                <a href="https://open.spotify.com/intl-ja/artist/52YowU7hAxTDqwFzJLKG2U" target="_blank" rel="noopener noreferrer" class="streaming-button">Spotify</a>
+                <a href="https://music.youtube.com/channel/UCNfI9yChGZqrf7fwellVlog" target="_blank" rel="noopener noreferrer" class="streaming-button">YouTube Music</a>
+                <a href="https://music.amazon.co.jp/artists/B0FQT5KX9L/seraph-veloce" target="_blank" rel="noopener noreferrer" class="streaming-button">Amazon Music</a>
+            </div>
         </div>
     </main>
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2025 PROJECT-KIMERA. ALL RIGHTS RESERVED.</p>
+            <p>© 2025 PROJECT-KIMERA. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
     
