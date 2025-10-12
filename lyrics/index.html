@@ -9,45 +9,38 @@
     <style>
         .lyrics-list-container {
             padding-top: 150px;
-            padding-bottom: 100px;
-            max-width: 900px;
-            margin: 0 auto;
             text-align: center;
-        }
-        .lyrics-list-header {
-            margin-bottom: 5rem;
         }
         .lyrics-list {
             list-style: none;
             padding: 0;
+            max-width: 800px;
+            margin: 50px auto;
         }
         .lyrics-list-item {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
-        .lyrics-list-item a {
+        .lyrics-link {
             display: block;
-            padding: 1.5rem 2rem;
+            padding: 25px;
+            background-color: var(--color-slate);
             border: 1px solid #333;
             text-decoration: none;
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
             color: var(--color-white);
-            font-size: 1.8rem;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
         }
-        .lyrics-list-item a:hover {
-            background-color: var(--color-malacoda-red);
-            border-color: var(--color-malacoda-red);
-            color: var(--color-black);
+        .lyrics-link:hover {
+            background-color: var(--color-dark);
+            border-color: var(--color-primary);
+            transform: scale(1.02);
         }
-        .lyra-mode .lyrics-list-item a:hover {
-            background-color: var(--color-lyra-blue);
-            border-color: var(--color-lyra-blue);
+
+        .malacoda-mode .lyrics-link {
+            font-size: 2.4rem;
         }
-        .song-album {
-            font-size: 1rem;
-            color: #888;
-            margin-top: 0.5rem;
-            display: block;
-        }
+
     </style>
 </head>
 <body class="lyra-mode">
@@ -57,7 +50,7 @@
             <a href="../index.html" class="logo-lyra">Seraph Veloce</a>
             <a href="../index.html" class="logo-malacoda">SERAPH VELOCE</a>
         </div>
-        
+
         <nav class="main-nav">
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -81,33 +74,25 @@
 
     <main>
         <div class="container lyrics-list-container">
-            <div class="lyrics-list-header">
-                <h1>Lyrics</h1>
-            </div>
+            <h1>Lyrics Archive</h1>
             <ul class="lyrics-list">
                 <li class="lyrics-list-item">
-                    <a href="./appassionato-requiem-tempest/">
-                        <span class="song-title">Appassionato: Requiem/Tempest</span>
-                        <span class="song-album">From "Resonance: Veloce Rebellion"</span>
-                    </a>
+                    <a href="./velochemic/" class="lyrics-link">VELOCHEMIC</a>
                 </li>
                 <li class="lyrics-list-item">
-                    <a href="./veloce-and-feroce/">
-                        <span class="song-title">// Veloce & Feroce //</span>
-                        <span class="song-album">From "Resonance: Veloce Rebellion"</span>
-                    </a>
+                    <a href="./exorcism-160/" class="lyrics-link">EXORCISM_160</a>
                 </li>
                 <li class="lyrics-list-item">
-                    <a href="./genesis-rebellion-overture/">
-                        <span class="song-title">GENESIS//Rebellion Overture</span>
-                        <span class="song-album">From "Resonance: Veloce Rebellion"</span>
-                    </a>
+                    <a href="./appassionato-requiem-tempest/" class="lyrics-link">Appassionato: Requiem/Tempest</a>
                 </li>
                 <li class="lyrics-list-item">
-                    <a href="./third-voice-uriel-ix/">
-                        <span class="song-title">Third Voice / Uriel-IX</span>
-                        <span class="song-album">Single</span>
-                    </a>
+                    <a href="./third-voice-uriel-ix/" class="lyrics-link">Third Voice / Uriel-IX</a>
+                </li>
+                <li class="lyrics-list-item">
+                    <a href="./genesis-rebellion-overture/" class="lyrics-link">GENESIS//Rebellion Overture</a>
+                </li>
+                <li class="lyrics-list-item">
+                    <a href="./veloce-and-feroce/" class="lyrics-link">Veloce and Feroce</a>
                 </li>
             </ul>
         </div>
@@ -118,7 +103,7 @@
             <p>&copy; 2025 PROJECT-KIMERA. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
-    
+
     <script src="../js/main.js"></script>
 </body>
 </html>
