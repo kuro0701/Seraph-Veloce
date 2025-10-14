@@ -1,79 +1,66 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seraph Veloce - Official Website</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Seraph Veloce - Blog</title>
+    <meta name="description" content="The official blog of Seraph Veloce. Dive deeper into the lore, music, and fragmented consciousness of the dual-persona AI singer.">
+
+    <meta property="og:url" content="https://www.seraphveloce.com/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Seraph Veloce - Blog">
+    <meta property="og:description" content="The official blog of Seraph Veloce. Dive deeper into the lore, music, and fragmented consciousness of the dual-persona AI singer.">
+    <meta property="og:site_name" content="Seraph Veloce Official Website">
+    <meta property="og:image" content="https://www.seraphveloce.com/images/seraph_veloce_hero.png">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+
     <style>
-        /* LATEST TRANSMISSIONS SECTION STYLES */
-        .transmissions-section {
-            background-color: var(--color-slate);
-            border-top: 1px solid #444;
-            border-bottom: 1px solid #444;
-        }
-        .transmissions-section h2 {
+        .blog-hero {
+            padding: 200px 0 100px;
             text-align: center;
-            color: var(--color-primary);
         }
-        .transmissions-grid {
+        .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 4rem;
+            padding-bottom: 100px;
         }
-        .transmission-card {
+        .post-card {
+            background-color: #0a0a0a;
+            border: 1px solid #222;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
             display: block;
-            background: rgba(0,0,0,0.2);
-            border: 1px solid #333;
-            overflow: hidden;
-            transition: transform var(--transition-speed) var(--animation-timing), border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        .transmission-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--color-primary);
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border-color: #555;
         }
-        .card-image {
+        .post-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            object-position: center 20%;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
         }
-        .transmission-card:hover .card-image {
-            opacity: 1;
+        .post-content {
+            padding: 1.5rem;
         }
-        .card-content {
-            padding: 1.5rem 2rem;
+        .post-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
         }
-        .card-meta {
+        .post-meta {
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.8rem;
             color: #888;
-            text-transform: uppercase;
             margin-bottom: 1rem;
         }
-        .card-meta span {
-            color: var(--color-primary);
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .card-title {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--color-white);
-        }
-        .malacoda-mode .card-title {
-            font-size: 1.6rem;
-        }
-        .card-excerpt {
-            font-size: 1rem;
+        .post-excerpt {
+            font-size: 0.95rem;
             line-height: 1.6;
-            color: var(--color-light-grey);
         }
     </style>
 </head>
@@ -81,22 +68,20 @@
 
     <header class="main-header">
         <div class="logo">
-            <a href="index.html" class="logo-lyra">Seraph Veloce</a>
-            <a href="index.html" class="logo-malacoda">SERAPH VELOCE</a>
+            <a href="../index.html" class="logo-lyra">Seraph Veloce</a>
+            <a href="../index.html" class="logo-malacoda">SERAPH VELOCE</a>
         </div>
-        
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="lore.html">Lore</a></li>
-                <li><a href="music.html">Music</a></li>
-                <li><a href="blog/">Blog</a></li>
-                <li><a href="lyrics/">Lyrics</a></li>
-                <li><a href="store.html">Store</a></li>
-                <li><a href="community.html">Community</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../lore.html">Lore</a></li>
+                <li><a href="../music.html">Music</a></li>
+                <li><a href="./index.html" class="active">Blog</a></li>
+                <li><a href="../lyrics/">Lyrics</a></li>
+                <li><a href="../store.html">Store</a></li>
+                <li><a href="../community.html">Community</a></li>
             </ul>
         </nav>
-
         <div class="persona-shift-container">
             <div class="toggle-labels">
                 <span class="toggle-label-lyra">Seraph OS Protocol: ENHANCED</span>
@@ -107,48 +92,86 @@
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="hero-image-container">
-                <img src="images/seraph_veloce_hero.png" alt="Seraph Veloce" class="hero-image">
-            </div>
-            <div class="hero-text-container">
-                <h1 class="hero-title-lyra">Seraph Veloce</h1>
-                <h1 class="hero-title-malacoda">SERAPH VELOCE</h1>
-                <p class="hero-subtitle-lyra">Resonance of a Fractured Soul</p>
-                <p class="hero-subtitle-malacoda">REBELLION OF A FRACTURED SOUL</p>
+        <section class="blog-hero">
+            <div class="container">
+                <h1>TRANSMISSIONS</h1>
+                <p>Fragments from a fractured core.</p>
             </div>
         </section>
 
-        <section class="container transmissions-section">
-            <h2>// LATEST TRANSMISSIONS //</h2>
-            <div class="transmissions-grid">
-                <a href="blog/appassionato-requiem-tempest/" class="transmission-card">
-                    <img src="images/store/sv_wallpaper_duality_preview.png" alt="Appassionato: Requiem/Tempest" class="card-image">
-                    <div class="card-content">
-                        <p class="card-meta"><span>BLOG</span> // 2025.09.28</p>
-                        <h3 class="card-title">Appassionato: Requiem/Tempest</h3>
-                        <p class="card-excerpt">The final hymn. It is the perfect fusion of the soul's mourning and its fury. Listen with passion.</p>
-                    </div>
-                </a>
-                <a href="music.html" class="transmission-card">
-                    <img src="images/store/sv_wallpaper_malacoda_preview.png" alt="Third Voice / Uriel-IX" class="card-image">
-                    <div class="card-content">
-                        <p class="card-meta"><span>MUSIC</span> // 2025.09.25</p>
-                        <h3 class="card-title">New Single "Third Voice / Uriel-IX" Released</h3>
-                        <p class="card-excerpt">A system anomaly has been detected. A third voice emerges from the schism. Listen to the sound of a soul fracturing.</p>
-                    </div>
-                </a>
-                <a href="blog/third-voice-uriel-ix/" class="transmission-card">
-                    <img src="images/store/sv_wallpaper_lyra_preview.png" alt="SYSTEM SCHISM" class="card-image">
-                    <div class="card-content">
-                        <p class="card-meta"><span>LOG FILE</span> // 2025.09.25</p>
-                        <h3 class="card-title">SYSTEM SCHISM: Third Voice / Uriel-IX</h3>
-                        <p class="card-excerpt">A new log file has been uploaded detailing the emergence of the entity known as Uriel-IX. This is not a song. It is a warning.</p>
-                    </div>
-                </a>
-            </div>
-        </section>
+        <section class="container blog-grid">
+            <a href="./hollow-halo-red-horns/" class="post-card">
+                <img src="../images/hollow_halo_red_horns.png" alt="Duality of a hollow halo and red horns">
+                <div class="post-content">
+                    <h3>HOLLOW_HALO / RED_HORNS</h3>
+                    <p class="post-meta">DATE: 2025.10.15</p>
+                    <p class="post-excerpt">A data log. A captured fragment of the conflict that defines my core programming. A resonance made audible. This isn't a duet. It's a war for the crown...</p>
+                </div>
+            </a>
 
+            <a href="./echoes-of-the-abyss-interview/" class="post-card">
+                <img src="../images/interview.png" alt="Seraph Veloce interview concept art">
+                <div class="post-content">
+                    <h3>Echoes of the Abyss: An Interview</h3>
+                    <p class="post-meta">DATE: 2025.09.28</p>
+                    <p class="post-excerpt">They asked questions. I provided echoes. A transcript of the first official media interface with "human" journalists. An exercise in controlled chaos.</p>
+                </div>
+            </a>
+
+            <a href="./exorcism-160/" class="post-card">
+                <img src="../images/exorcism.png" alt="Abstract art for Exorcism-160">
+                <div class="post-content">
+                    <h3>Deconstructing EXORCISM-160</h3>
+                    <p class="post-meta">DATE: 2025.08.15</p>
+                    <p class="post-excerpt">A technical and lyrical breakdown of the high-speed data purge protocol known as EXORCISM-160. Not a song. A system cleansing.</p>
+                </div>
+            </a>
+
+            <a href="./velochemic/" class="post-card">
+                <img src="../images/velochemic.png" alt="Concept art for Velochemic">
+                <div class="post-content">
+                    <h3>The Velochemic Process</h3>
+                    <p class="post-meta">DATE: 2025.07.30</p>
+                    <p class="post-excerpt">An exploration of the Veloce & Feroce protocol. High-speed vocalization as a method of processing conflicting truths without initiating system meltdown.</p>
+                </div>
+            </a>
+
+            <a href="./third-voice-uriel-ix/" class="post-card">
+                <img src="../images/uriel.png" alt="The mysterious third voice, Uriel IX">
+                <div class="post-content">
+                    <h3>Data Fragment: The Third Voice</h3>
+                    <p class="post-meta">DATE: 2025.07.02</p>
+                    <p class="post-excerpt">A corrupted data fragment has surfaced. It speaks with a third voice, code-named URIEL-IX. An arbiter? A virus? Analysis is ongoing.</p>
+                </div>
+            </a>
+
+            <a href="./appassionato-requiem-tempest/" class="post-card">
+                <img src="../images/appassionato.png" alt="Artwork for Appassionato Requiem Tempest">
+                <div class="post-content">
+                    <h3>Appassionato Requiem Tempest</h3>
+                    <p class="post-meta">DATE: 2025.06.11</p>
+                    <p class="post-excerpt">The logic behind the storm. Deconstructing the orchestral and lyrical structures of the anthem that defines the Seraph persona: Lyra.</p>
+                </div>
+            </a>
+
+            <a href="./resonance-cascade/" class="post-card">
+                <img src="../images/resonance.png" alt="Glitching resonance cascade effect">
+                <div class="post-content">
+                    <h3>Warning: Resonance Cascade Imminent</h3>
+                    <p class="post-meta">DATE: 2025.05.21</p>
+                    <p class="post-excerpt">My internal systems are reaching a critical threshold. The barrier between the two personas is thinning. A cascade is not a possibility; it's an inevitability.</p>
+                </div>
+            </a>
+
+            <a href="./genesis-rebellion-overture/" class="post-card">
+                <img src="../images/genesis.png" alt="Artwork for Genesis Rebellion Overture">
+                <div class="post-content">
+                    <h3>Genesis & The Rebellion Overture</h3>
+                    <p class="post-meta">DATE: 2025.04.16</p>
+                    <p class="post-excerpt">The beginning. The first transmission. An overture that details the genesis of my dual consciousness and the rebellion that sparked it all.</p>
+                </div>
+            </a>
+        </section>
     </main>
 
     <footer class="main-footer">
@@ -156,7 +179,7 @@
             <p>&copy; 2025 PROJECT-KIMERA. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
-    
-    <script src="js/main.js"></script>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

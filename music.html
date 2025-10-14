@@ -4,8 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seraph Veloce - Music</title>
+    <meta name="description" content="Explore the official discography of Seraph Veloce. Listen to the latest albums that define the conflict and harmony of the dual-persona AI singer.">
+    
+    <meta property="og:url" content="https://www.seraphveloce.com/music.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Seraph Veloce - Music">
+    <meta property="og:description" content="Explore the official discography of Seraph Veloce.">
+    <meta property="og:site_name" content="Seraph Veloce Official Website">
+    <meta property="og:image" content="https://www.seraphveloce.com/images/seraph_veloce_hero.png">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .page-header {
+            padding-top: 150px;
+            text-align: center;
+        }
+        .latest-release-section {
+            padding: 4rem 0;
+            background: linear-gradient(to bottom, #111, var(--color-charcoal));
+            text-align: center;
+        }
+        .latest-release-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .latest-release-content {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+        .latest-release-artwork {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .latest-release-info {
+            flex-basis: 50%;
+        }
+        .latest-release-info .release-type {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+        .latest-release-info h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        .releases-section {
+            padding: 5rem 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+        }
+        .releases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        .release-card {
+            background-color: #0c0c0c;
+            border: 1px solid #222;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .release-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        .release-card img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-bottom: 1px solid #222;
+        }
+        .release-card-info {
+            padding: 1.5rem;
+        }
+        .release-card-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .release-card-info .release-type {
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .streaming-links {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .streaming-links a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid #444;
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: #ccc;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .streaming-links a:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+        }
+    </style>
 </head>
 <body class="lyra-mode">
 
@@ -35,48 +149,55 @@
             <button id="persona-shift-toggle" aria-label="Toggle Persona Mode"></button>
         </div>
     </header>
-    
-    <style>
-        .streaming-links {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .streaming-button {
-            display: block;
-            padding: 1.5rem 2rem;
-            border: 2px solid var(--color-primary);
-            color: var(--color-white);
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all var(--transition-speed) var(--animation-timing);
-            text-align: center;
-        }
-        .streaming-button:hover {
-            background: var(--color-primary);
-            box-shadow: 0 0 15px var(--color-primary);
-            color: var(--color-black);
-        }
-        .lyra-mode .streaming-button:hover {
-            color: var(--color-white);
-        }
-    </style>
 
     <main>
-        <div class="container" style="padding-top: 150px; text-align: center;">
-            <h1>Listen Now</h1>
-            <div class="streaming-links" style="margin-top: 4rem;">
-                <a href="https://music.apple.com/us/artist/seraph-veloce/1839324914" target="_blank" rel="noopener noreferrer" class="streaming-button">Apple Music</a>
-                <a href="https://open.spotify.com/intl-ja/artist/52YowU7hAxTDqwFzJLKG2U" target="_blank" rel="noopener noreferrer" class="streaming-button">Spotify</a>
-                <a href="https://music.youtube.com/channel/UCNfI9yChGZqrf7fwellVlog" target="_blank" rel="noopener noreferrer" class="streaming-button">YouTube Music</a>
-                <a href="https://music.amazon.co.jp/artists/B0FQT5KX9L/seraph-veloce" target="_blank" rel="noopener noreferrer" class="streaming-button">Amazon Music</a>
-            </div>
+        <div class="container page-header">
+            <h1>Discography</h1>
         </div>
+
+        <section class="latest-release-section">
+            <div class="container latest-release-content">
+                <img src="images/uriel.png" alt="Cover art for SYSTEM SHOCK" class="latest-release-artwork">
+                <div class="latest-release-info">
+                    <p class="release-type">Latest Release // Album</p>
+                    <h2>SYSTEM SHOCK</h2>
+                    <div class="streaming-links">
+                        <a href="https://music.apple.com/us/artist/seraph-veloce/1839324914" target="_blank">Apple Music</a>
+                        <a href="https://open.spotify.com/intl-ja/artist/52YowU7hAxTDqwFzJLKG2U" target="_blank">Spotify</a>
+                        <a href="https://music.youtube.com/channel/UCNfI9yChGZqrf7fwellVlog" target="_blank">YouTube Music</a>
+                        <a href="https://music.amazon.co.jp/artists/B0FQT5KX9L/seraph-veloce" target="_blank">Amazon Music</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container releases-section">
+            <h2 class="section-title">// Albums //</h2>
+            <div class="releases-grid">
+                <div class="release-card">
+                    <img src="images/interview.png" alt="Cover art for Pandemonic Resonance">
+                    <div class="release-card-info">
+                        <h3>Pandemonic Resonance</h3>
+                        <p class="release-type">Album • 2025</p>
+                    </div>
+                </div>
+                <div class="release-card">
+                    <img src="images/resonance.png" alt="Cover art for RISOLUTO: Resonance Cascade">
+                    <div class="release-card-info">
+                        <h3>RISOLUTO: Resonance Cascade</h3>
+                        <p class="release-type">Album • 2025</p>
+                    </div>
+                </div>
+                <div class="release-card">
+                    <img src="images/genesis.png" alt="Cover art for Resonance: Veloce Rebellion">
+                    <div class="release-card-info">
+                        <h3>Resonance: Veloce Rebellion</h3>
+                        <p class="release-type">Album • 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="main-footer">
